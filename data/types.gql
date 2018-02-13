@@ -1,0 +1,21 @@
+
+
+const fitbitTypes = `
+
+type Query {
+    Fitbit: Fitbit
+}
+
+type Fitbit {
+    Steps: Step
+}
+
+type Step {
+    count: Int
+}
+
+`;
+
+export default fitbitTypes;
+
+
