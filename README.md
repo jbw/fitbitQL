@@ -9,10 +9,11 @@ Query example:
 
 ```
 {
-  Fitbit {
-    Steps {
-      count
-    }
+  activities {
+    name
+  }
+  steps {
+    count
   }
 }
 ```
@@ -22,10 +23,13 @@ Result
 ```json
 {
   "data": {
-    "Fitbit": {
-      "Steps": {
-        "count": 1000
+    "activities": [
+      {
+        "name": "Walk"
       }
+    ],
+    "steps": {
+      "count": 1000
     }
   }
 }

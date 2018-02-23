@@ -2,8 +2,9 @@
 
 const fitbitTypes = `
 
-type Query {
-    Fitbit: Fitbit
+type Activity {
+    id: Int!,
+    name: String
 }
 
 type Fitbit {
@@ -14,6 +15,14 @@ type Step {
     count: Int
 }
 
+type User {
+    username:String!
+}
+
+type Query {
+    activities: [Activity]
+    steps: Step
+}
 `;
 
 export default fitbitTypes;
