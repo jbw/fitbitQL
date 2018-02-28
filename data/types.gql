@@ -16,12 +16,40 @@ type Step {
 }
 
 type User {
-    username:String!
+    aboutMe: String,
+    avatar: String,
+    avatar150: String,
+    avatar640: String,
+    city: String,
+    clockTimeDisplayFormat: String,
+    country: String,
+    dateOfBirth: String,
+    displayName: String,
+    distanceUnit: String,
+    encodedId: String,
+    foodsLocale: String,
+    fullName: String,
+    gender: String,
+    glucoseUnit: String,
+    height: String,
+    heightUnit: String,
+    locale: String,
+    memberSince: String,
+    offsetFromUTCMillis: String,
+    startDayOfWeek: String,
+    state: String,
+    strideLengthRunning: String,
+    strideLengthWalking: String,
+    timezone: String,
+    waterUnit: String,
+    weight: String,
+    weightUnit: String
 }
 
 type Query {
     activities: [Activity]
     steps: Step
+    user: User
 }
 `;
 
