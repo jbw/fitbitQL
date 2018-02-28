@@ -5,7 +5,7 @@ GraphQL interface to your Fitbit data.
 
 Go to [http://localhost:3000/graphiql](http://localhost:3000/graphiql)
 
-Query example:
+## Query example:
 
 ```
 {
