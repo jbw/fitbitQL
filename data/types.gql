@@ -47,7 +47,7 @@ type User {
 }
 
 type Query {
-    activities: [Activity]
+    activities(activityType: String!): [Activity],
     steps: Step
     user: User
 }

@@ -8,7 +8,7 @@ const activities = [
 
 const typeResolvers = {
   Query: {
-    activities: () => activities,
+    activities: (_, { activityType }) => activities.filter(activity => activity.name === activityType),
   },
 };
 
