@@ -6,9 +6,15 @@ const activities = [
   },
 ];
 
+const summary = {
+  steps: 1000,
+};
+
 const typeResolvers = {
   Query: {
     activities: (_, { activityType }) => activities.filter(activity => activity.name === activityType),
+    summary: (_, { dateOrPeriod }) => summary,
+
   },
 };
 

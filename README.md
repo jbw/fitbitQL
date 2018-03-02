@@ -13,6 +13,11 @@ Go to [http://localhost:3000/graphiql](http://localhost:3000/graphiql)
     id
     name
   }
+
+  summary(dateOrPeriod: "today") {
+    steps
+  }
+
   steps {
     count
   }
@@ -30,6 +35,11 @@ Result
         "name": "Walk"
       }
     ],
+
+    "summary": {
+      "steps": 1000
+    }
+
     "steps": {
       "count": 1000
     }

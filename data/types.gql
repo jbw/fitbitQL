@@ -46,8 +46,12 @@ type User {
     weightUnit: String
 }
 
+type Summary {
+    steps: Int
+}
 type Query {
     activities(activityType: String!): [Activity],
+    summary(dateOrPeriod: String!): Summary
     steps: Step
     user: User
 }
