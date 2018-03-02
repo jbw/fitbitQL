@@ -38,7 +38,7 @@ Result
 
     "summary": {
       "steps": 1000
-    }
+    },
 
     "steps": {
       "count": 1000
