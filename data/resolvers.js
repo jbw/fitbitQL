@@ -1,4 +1,4 @@
-import Hypertonic from '../../hypertonic/build/hypertonic';
+import Hypertonic from 'hypertonic';
 
 const token = require('../secrets/token');
 
