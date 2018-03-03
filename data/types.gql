@@ -18,8 +18,8 @@ type Step {
 type User {
     aboutMe: String,
     avatar: String,
-    avatar150: String,
-    avatar640: String,
+    avatar15Int: String,
+    avatar64Int: String,
     city: String,
     clockTimeDisplayFormat: String,
     country: String,
@@ -48,7 +48,15 @@ type User {
 
 type Summary {
     steps: Int
+    elevation: Int,
+    fairlyActiveMinutes: Int,
+    floors: Int,
+    lightlyActiveMinutes: Int,
+    marginalCalories: Int,
+    sedentaryMinutes: Int,
+    veryActiveMinutes: Int
 }
+
 type Query {
     activities(activityType: String!): [Activity],
     summary(dateOrPeriod: String!): Summary

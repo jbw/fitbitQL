@@ -1,3 +1,8 @@
+import Hypertonic from '../../hypertonic/build/hypertonic';
+
+const token = require('../secrets/token');
+
+const hypertonic = Hypertonic(token.access_token);
 
 const activities = [
   {
@@ -6,15 +11,10 @@ const activities = [
   },
 ];
 
-const summary = {
-  steps: 1000,
-};
-
 const typeResolvers = {
   Query: {
     activities: (_, { activityType }) => activities.filter(activity => activity.name === activityType),
-    summary: (_, { dateOrPeriod }) => summary,
-
+    summary: (_, { dateOrPeriod }) => hypertonic.getSummary(dateOrPeriod).then(data => data.summary),
   },
 };
 

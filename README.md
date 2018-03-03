@@ -16,6 +16,8 @@ Go to [http://localhost:3000/graphiql](http://localhost:3000/graphiql)
 
   summary(dateOrPeriod: "today") {
     steps
+    sedentaryMinutes
+    veryActiveMinutes
   }
 
   steps {
@@ -37,7 +39,9 @@ Result
     ],
 
     "summary": {
-      "steps": 1000
+        "steps": 0,
+        "sedentaryMinutes": 65,
+        "veryActiveMinutes": 0
     },
 
     "steps": {
