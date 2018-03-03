@@ -14,7 +14,7 @@
     "express": "^4.16.2",
     "graphql": "^0.13.0",
     "graphql-tools": "^2.21.0",
-    "hypertonic": "^1.0.1"
+    "hypertonic": "^1.2.1"
   },
   "babel": {
     "presets": [

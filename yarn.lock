@@ -1906,13 +1906,12 @@ http-signature@~1.1.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
-hypertonic@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/hypertonic/-/hypertonic-1.0.1.tgz#7aeb086cd4e045d98e3c054c54b9d16f3c2379ba"
+hypertonic@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/hypertonic/-/hypertonic-1.2.1.tgz#82acc27f88766db1e81de2818b4f77791ce20910"
   dependencies:
     append-query "^2.0.1"
     axios "^0.17.1"
-    moment "^2.20.1"
 
 iconv-lite@0.4.19, iconv-lite@^0.4.17:
   version "0.4.19"
@@ -2471,10 +2470,6 @@ mixin-deep@^1.2.0:
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
-
-moment@^2.20.1:
-  version "2.21.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.21.0.tgz#2a114b51d2a6ec9e6d83cf803f838a878d8a023a"
 
 ms@2.0.0:
   version "2.0.0"
