@@ -1,8 +1,4 @@
-import Hypertonic from 'hypertonic';
 
-const token = require('../secrets/token');
-
-const hypertonic = Hypertonic(token.access_token);
 
 const activities = [
   {
@@ -14,7 +10,7 @@ const activities = [
 const typeResolvers = {
   Query: {
     activities: (_, { activityType }) => activities.filter(activity => activity.name === activityType),
-    summary: (_, { dateOrPeriod }) => hypertonic.getSummary(dateOrPeriod).then(data => data.summary),
+    summary: (_, { dateOrPeriod }, context) => context.fitbit.getSummary(dateOrPeriod).then(data => data.summary),
   },
 };
 
