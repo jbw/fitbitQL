@@ -16,7 +16,7 @@ const httpLink = createHttpLink({
 const authLink = setContext((_, { headers }) => ({
   headers: {
     ...headers,
-    authorization: token || '',
+    authorization: token,
   },
 }));
 
