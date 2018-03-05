@@ -48,7 +48,7 @@ type User {
 
 type Summary {
     steps: Int
-    elevation: Int,
+    elevation: Float,
     fairlyActiveMinutes: Int,
     floors: Int,
     lightlyActiveMinutes: Int,
