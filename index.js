@@ -10,7 +10,7 @@ const PORT = 3000;
 const server = express();
 
 server.use('/graphql', bodyParser.json(), graphqlExpress((req) => {
-  const token = req.header('Authorization');
+  const token = req.header('Authorization') || '';
 
   return {
     schema,
