@@ -1,6 +1,6 @@
 const mocks = {
   String: () => 'Mock String',
-
+  Int: () => 90001,
   Step: () => ({
     count: 1000,
   }),

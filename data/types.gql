@@ -21,8 +21,61 @@ type Lifetime {
 
 }
 
-type Calorie
-{
+type LevelSummaryDetail{
+    count: Int
+    minutes: Int
+    thirtyDayAvgMinutes: Int
+}
+
+type SleepLevelData {
+    dateTime: String
+    level: String
+    seconds: Int
+}
+
+type LevelSummary {
+    deep: LevelSummaryDetail
+    light: LevelSummary
+    rem: LevelSummary
+    wake: LevelSummary
+
+}
+
+type Level {
+    summary: LevelSummary
+    data: [SleepLevelData]
+    shortDate: [SleepLevelData]
+}
+
+type Sleep {
+    dateOfSleep: String
+    duration: Int
+    efficiency: Int
+    isMainSleep: Boolean
+
+    levels: Level
+    logId: String
+    minutesAfterWakeup: Int
+    minutesAsleep: Int
+    minutesAwake: Int
+    minutesToFallAsleep: Int
+    startTime: String
+    timeInBed: Int
+    type: String
+}
+
+type SleepSummary {
+    totalMinutesAsleep: Int
+    totalSleepRecords: Int
+    totalTimeInBed: Int
+}
+
+type ActivitySleep {
+    sleep: [Sleep]
+    summary: SleepSummary
+}
+
+type Calorie {
     dateTime: String,
     value: String
 }
@@ -147,6 +200,7 @@ type Query {
     steps: Step
     user: User
     lifetime: Lifetime
+    sleep: ActivitySleep
 }
 `;
 
