@@ -12,6 +12,7 @@ type Calorie
     dateTime: String,
     value: String
 }
+
 type Dataset {
     level: Int,
     mets: Int,
@@ -19,17 +20,37 @@ type Dataset {
     value: Float
 }
 
-type ActivityCalorieIntraDay {
+type ActivityHeart {
+    heart: [Heart],
+    intraday: ActivityIntraDay
+}
+
+type Heart {
+    customHeartRateZones: [HeartRateZone]
+    dateTime: String
+    heartRateZones: [ActivityHeart]
+    value: String
+}
+
+type HeartRateZone {
+    caloriesOut: Float,
+    max: Int,
+    min: Int,
+    minutes: Int,
+    name: String
+}
+
+type ActivityIntraDay {
     datasetInterval: Int,
     datasetType: String
     dataset: [Dataset]
-
 }
 
 type ActivityCalorie{
     calories: [Calorie],
-    intraday: ActivityCalorieIntraDay
+    intraday: ActivityIntraDay
 }
+
 type Fitbit {
     Steps: Step
 }
@@ -81,6 +102,7 @@ type Distance {
     activity: String,
     distance: Float
 }
+
 type Summary {
     steps: Int
     elevation: Float,
@@ -102,6 +124,7 @@ type Query {
     activities(activityType: String!): [Activity],
     summary(dateOrPeriod: String!): Summary
     calories(date: String!): ActivityCalorie
+    heart: ActivityHeart
     steps: Step
     user: User
 }
