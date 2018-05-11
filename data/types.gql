@@ -7,6 +7,29 @@ type Activity {
     name: String
 }
 
+type Calorie
+{
+    dateTime: String,
+    value: String
+}
+type Dataset {
+    level: Int,
+    mets: Int,
+    time:String,
+    value: Float
+}
+
+type ActivityCalorieIntraDay {
+    datasetInterval: Int,
+    datasetType: String
+    dataset: [Dataset]
+
+}
+
+type ActivityCalorie{
+    calories: [Calorie],
+    intraday: ActivityCalorieIntraDay
+}
 type Fitbit {
     Steps: Step
 }
@@ -78,6 +101,7 @@ type Summary {
 type Query {
     activities(activityType: String!): [Activity],
     summary(dateOrPeriod: String!): Summary
+    calories(date: String!): ActivityCalorie
     steps: Step
     user: User
 }

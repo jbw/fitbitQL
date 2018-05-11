@@ -22,6 +22,27 @@ const mocks = {
     ],
 
   }),
+
+  ActivityCalorie: () => ({
+
+  }),
+
+  ActivityCalorieIntraDay: () => ({
+    datasetInterval: 1,
+    datasetType: 'min',
+  }),
+
+  Dataset: () => ({
+    level: 0,
+    mets: 10,
+    time: '00:00:00',
+    value: 1.1929999589920044,
+
+  }),
+  Calorie: () => ({
+    dateTime: '2018-01-19',
+    value: '2334',
+  }),
 };
 
 export default mocks;
