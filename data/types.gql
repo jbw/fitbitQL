@@ -95,7 +95,7 @@ type ActivityHeart {
 type Heart {
     customHeartRateZones: [HeartRateZone]
     dateTime: String
-    heartRateZones: [ActivityHeart]
+    heartRateZones: [HeartRateZone]
     value: String
 }
 
