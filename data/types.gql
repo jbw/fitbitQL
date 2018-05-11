@@ -15,6 +15,14 @@ type Step {
     count: Int
 }
 
+type Goal {
+    activeMinutes: Int,
+    caloriesOut: Int,
+    distance: Float,
+    floors: Int,
+    steps: Int
+}
+
 type User {
     aboutMe: String,
     avatar: String,
@@ -46,6 +54,10 @@ type User {
     weightUnit: String
 }
 
+type Distance {
+    activity: String,
+    distance: Float
+}
 type Summary {
     steps: Int
     elevation: Float,
@@ -54,7 +66,13 @@ type Summary {
     lightlyActiveMinutes: Int,
     marginalCalories: Int,
     sedentaryMinutes: Int,
-    veryActiveMinutes: Int
+    veryActiveMinutes: Int,
+
+    activeScore: Int,
+    activityCalories: Int,
+    caloriesBMR: Int,
+    caloriesOut: Int,
+    distances: [Distance]
 }
 
 type Query {
