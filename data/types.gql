@@ -7,6 +7,20 @@ type Activity {
     name: String
 }
 
+type LifetimeTotal {
+    distance: DateValue
+    floors: DateValue
+    steps: DateValue
+}
+
+type LifetimeBest {
+    total: LifetimeTotal
+}
+type Lifetime {
+    best: LifetimeBest
+
+}
+
 type Calorie
 {
     dateTime: String,
@@ -103,6 +117,11 @@ type Distance {
     distance: Float
 }
 
+type DateValue {
+    date: String,
+    value: Float
+}
+
 type Summary {
     steps: Int
     elevation: Float,
@@ -127,6 +146,7 @@ type Query {
     heart: ActivityHeart
     steps: Step
     user: User
+    lifetime: Lifetime
 }
 `;
 
