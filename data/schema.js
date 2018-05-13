@@ -12,7 +12,8 @@ const schema = makeExecutableSchema({
 addMockFunctionsToSchema({
   schema,
   mocks,
-  preserveResolvers: true,
+  resolvers,
+  preserveResolvers: false, // use mocks
 });
 
 

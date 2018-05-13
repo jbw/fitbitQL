@@ -9,6 +9,8 @@ const PORT = 3000;
 
 const server = express();
 
+// TODO: add auth route here for fitbit
+
 server.use('/graphql', bodyParser.json(), graphqlExpress((req) => {
   const token = req.header('Authorization') || '';
 
@@ -23,5 +25,4 @@ server.use('/graphql', bodyParser.json(), graphqlExpress((req) => {
 
 server.get('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
-server.listen(PORT, () =>
-  console.log(`GraphiQL is now running on http://localhost:${PORT}/graphiql`));
+server.listen(PORT, () => console.log(`GraphiQL is now running on http://localhost:${PORT}/graphiql`));

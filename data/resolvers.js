@@ -14,7 +14,7 @@ const typeResolvers = {
     summary: (_, { dateOrPeriod }, context) =>
       context.fitbit.getSummary(dateOrPeriod)
         .then(data => data.summary)
-        .catch((err) => { throw new Error(err.errors[0].message); }),
+        .catch((err) => { throw new Error(err); }),
   },
 };
 
