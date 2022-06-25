@@ -21,7 +21,7 @@
     "graphql-tag": "^2.8.0",
     "graphql-tools": "^2.21.0",
     "hypertonic": "^1.2.1",
-    "node-fetch": "^2.0.0"
+    "node-fetch": "^2.6.7"
   },
   "babel": {
     "presets": [
